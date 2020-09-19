@@ -8,5 +8,5 @@
 - [x] Selection Sort
 - [x] Insertion Sort
 - [x] Merge Sort
-- [ ] Quick Sort
-- [ ] Radix Sort
+- [x] Quick Sort
+- [x] Radix Sort
