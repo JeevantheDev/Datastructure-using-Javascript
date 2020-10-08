@@ -23,3 +23,15 @@
 - [x] Remove a node by its postion
 - [x] Reverse the list
 - [x] Print the list
+
+### 3. Double Linked-List
+
+- [x] Insert node at the beginning
+- [x] Remove node from the beginning
+- [x] Insert node at the end
+- [x] Remove node from the end
+- [x] Get a node by its position
+- [x] Insert a node at a position
+- [x] Change the value of a node by its postion
+- [x] Remove a node by its postion
+- [x] Print the list
