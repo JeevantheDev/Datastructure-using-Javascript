@@ -35,3 +35,14 @@
 - [x] Change the value of a node by its postion
 - [x] Remove a node by its postion
 - [x] Print the list
+
+### 4. Stack
+
+- [x] Push values into the stack.
+- [x] Pop values from the stack.
+- [x] return Peek values of the stack.
+
+### 5. Queue
+
+- [x] Insert values into the Queue.
+- [x] Remove values from the Queue.
