@@ -1,4 +1,4 @@
-# Implemention of Basic Data structure using Javascript
+# implementation of Basic Data structure using Javascript
 
 ## Contents:-
 
