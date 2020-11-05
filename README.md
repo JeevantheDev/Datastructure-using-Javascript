@@ -40,7 +40,7 @@
 
 - [x] Push values into the stack.
 - [x] Pop values from the stack.
-- [x] return Peek values of the stack.
+- [x] Return Peek value of the stack.
 
 ### 5. Queue
 
