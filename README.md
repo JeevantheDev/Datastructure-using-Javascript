@@ -46,3 +46,13 @@
 
 - [x] Insert values into the Queue.
 - [x] Remove values from the Queue.
+
+### 6. Binary Search Tree
+
+- [x] Insert values in BST
+- [x] Find value in BST
+- [x] Breadth First Tree Traversal
+- [x] Depth First Tree Traversal
+  - [x] Post Order
+  - [x] Pre Order
+  - [x] In Order
