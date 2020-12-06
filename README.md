@@ -59,7 +59,7 @@
 
 ### 7. Hash Table
 
-### 8. Graph
+### 8. Graph (Adjacency List)
 
 - [x] Add Vertex
 - [x] Add Edge
