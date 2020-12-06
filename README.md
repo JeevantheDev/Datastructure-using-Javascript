@@ -56,3 +56,15 @@
   - [x] Post Order
   - [x] Pre Order
   - [x] In Order
+
+### 7. Hash Table
+
+### 8. Graph
+
+- [x] Add Vertex
+- [x] Add Edge
+- [x] Remove Vertex
+- [x] Remove Edge
+- [x] Depth First Search (Recursive)
+- [x] Depth First Search (Iterative)
+- [x] Breadth First Search (Iterative)

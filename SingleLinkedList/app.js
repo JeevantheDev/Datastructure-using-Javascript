@@ -59,6 +59,7 @@ class SingleLinkedList {
     }
     return current;
   }
+
   //   Add a new node to beginning
   unShift(val) {
     var newNode = new Node(val);
@@ -133,6 +134,8 @@ class SingleLinkedList {
     return nodeAtCurrIndex;
   }
 
+  // Practice
+  //ToDo Watching Video
   //   Reverse the linkedList
   reverse() {
     var node = this.head;
@@ -175,7 +178,7 @@ console.log("Remove node from the end of the List:- ");
 sll.print();
 console.log(sll);
 sll.unShift(10);
-sll.unShift(15);
+sll.unShift(50);
 console.log("Insert node at the beginning of the List:- ");
 sll.print();
 console.log(sll);

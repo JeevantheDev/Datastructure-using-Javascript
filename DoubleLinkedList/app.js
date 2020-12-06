@@ -45,6 +45,7 @@ class DoubleLinkedList {
     this.length--;
     return toBePopped;
   }
+
   //   Remove the node from the beginning
   shift() {
     if (!this.head) {
