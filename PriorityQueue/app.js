@@ -1,6 +1,12 @@
-class MaxBinaryHeap {
+class PriorityQueue {
   constructor() {
     this.values = [];
+  }
+
+  enqueue(val, priority) {
+    let newNode = new Node(val, priority);
+    this.values.push(newNode);
+    this.bubbleUp();
   }
 
   // helper function
@@ -12,26 +18,22 @@ class MaxBinaryHeap {
       let parentIdx = Math.floor((index - 1) / 2);
       let parent = this.values[parentIdx];
 
-      if (element <= parent) break;
+      if (element.priority >= parent.priority) break;
+
       this.values[parentIdx] = element;
       this.values[index] = parent;
       index = parentIdx;
     }
   }
 
-  insert(ele) {
-    this.values.push(ele);
-    this.bubbleUp();
-  }
-
-  extractMax() {
-    const max = this.values[0];
+  dequeue() {
+    const min = this.values[0];
     const end = this.values.pop();
     if (this.values.length > 0) {
       this.values[0] = end;
       this.sinkDown();
     }
-    return max;
+    return min;
   }
   sinkDown() {
     let idx = 0;
@@ -45,15 +47,15 @@ class MaxBinaryHeap {
 
       if (leftChildIdx < length) {
         leftChild = this.values[leftChildIdx];
-        if (leftChild > element) {
+        if (leftChild.priority < element.priority) {
           swap = leftChildIdx;
         }
       }
       if (rightChildIdx < length) {
         rightChild = this.values[rightChildIdx];
         if (
-          (swap === null && rightChild > element) ||
-          (swap !== null && rightChild > leftChild)
+          (swap === null && rightChild.priority < element.priority) ||
+          (swap !== null && rightChild.priority < leftChild.priority)
         ) {
           swap = rightChildIdx;
         }
@@ -66,15 +68,17 @@ class MaxBinaryHeap {
   }
 }
 
-const maxHeap = new MaxBinaryHeap();
-console.log("Insert Node into the MaxHeap");
-maxHeap.insert(41);
-maxHeap.insert(39);
-maxHeap.insert(18);
-maxHeap.insert(27);
-maxHeap.insert(12);
-maxHeap.insert(55);
-console.log(maxHeap);
-console.log("Extract the Max Value");
-console.log(maxHeap.extractMax());
-console.log(maxHeap);
+class Node {
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
+    this.insertTime = Date.now();
+  }
+}
+
+const pq = new PriorityQueue();
+pq.enqueue("Common Cold", 3);
+pq.enqueue("Mideum Cold", 1);
+pq.enqueue("High Cold", 5);
+pq.enqueue("Very High Cold", 5);
+console.log(pq);

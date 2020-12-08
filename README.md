@@ -57,9 +57,19 @@
   - [x] Pre Order
   - [x] In Order
 
-### 7. Hash Table
+### 7. Binary Heap
 
-### 8. Graph (Adjacency List)
+- [x] Insert values into MaxHeap.
+- [x] Extract the max value from MaxHeap.
+
+### 8. Priority Queue (Min Heap)
+
+- [x] Enqueue.
+- [x] Dequeue.
+
+### 9. Hash Table
+
+### 10. Graph (Adjacency List)
 
 - [x] Add Vertex
 - [x] Add Edge
