@@ -2,6 +2,11 @@
 
 ## Contents:-
 
+### 0. Searching
+
+- [x] Linear Searching
+- [x] Binary Searching
+
 ### 1. Sorting
 
 - [x] Bubble Sort
