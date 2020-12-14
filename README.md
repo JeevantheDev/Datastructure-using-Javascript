@@ -4,8 +4,8 @@
 
 ### 0. Searching
 
-- [x] Linear Searching
-- [x] Binary Searching
+- [x] Linear Searching `-14/12/2020`
+- [x] Binary Searching `-14/12/2020`
 
 ### 1. Sorting
 
