@@ -74,7 +74,7 @@
 
 ### 9. Hash Table
 
-### 10. Graph (Adjacency List)
+#### 10. Graph (Adjacency List)
 
 - [x] Add Vertex
 - [x] Add Edge
