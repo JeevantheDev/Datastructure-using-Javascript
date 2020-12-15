@@ -10,12 +10,25 @@ class SingleLinkedList {
     this.head = null;
     this.tail = null;
   }
-  //   Insert Value into the end of List
+
+  // //   Insert Value into the end of List
+  // push(val) {
+  //   var newNode = new Node(val);
+  //   if (!this.head) {
+  //     this.head = newNode;
+  //     this.tail = this.head;
+  //   } else {
+  //     this.tail.next = newNode;
+  //     this.tail = newNode;
+  //   }
+  //   this.length++;
+  //   return this;
+  // }
   push(val) {
     var newNode = new Node(val);
     if (!this.head) {
       this.head = newNode;
-      this.tail = this.head;
+      this.tail = newNode;
     } else {
       this.tail.next = newNode;
       this.tail = newNode;
@@ -24,11 +37,28 @@ class SingleLinkedList {
     return this;
   }
 
-  //   Remove the value from the end
+  // //   Remove the value from the end
+  // pop() {
+  //   if (!this.head) {
+  //     return undefined;
+  //   }
+  //   var current = this.head;
+  //   var newTail = this.head;
+  //   while (current.next) {
+  //     newTail = current;
+  //     current = current.next;
+  //   }
+  //   this.tail = newTail;
+  //   this.tail.next = null;
+  //   this.length--;
+  //   if (this.length === 0) {
+  //     this.head = null;
+  //     this.tail = null;
+  //   }
+  //   return current;
+  // }
   pop() {
-    if (!this.head) {
-      return undefined;
-    }
+    if (!this.head) return undefined;
     var current = this.head;
     var newTail = this.head;
     while (current.next) {
@@ -45,11 +75,22 @@ class SingleLinkedList {
     return current;
   }
 
-  //   Remove the value from the beginning
+  // //   Remove the value from the beginning
+  // shift() {
+  //   if (!this.head) {
+  //     return undefined;
+  //   }
+  //   var current = this.head;
+  //   this.head = current.next;
+  //   this.length--;
+  //   if (this.length === 0) {
+  //     this.head = null;
+  //     this.tail = null;
+  //   }
+  //   return current;
+  // }
   shift() {
-    if (!this.head) {
-      return undefined;
-    }
+    if (!this.head) return undefined;
     var current = this.head;
     this.head = current.next;
     this.length--;
@@ -60,7 +101,19 @@ class SingleLinkedList {
     return current;
   }
 
-  //   Add a new node to beginning
+  // //   Add a new node to beginning
+  // unShift(val) {
+  //   var newNode = new Node(val);
+  //   if (!this.head) {
+  //     this.head = newNode;
+  //     this.tail = this.head;
+  //   } else {
+  //     newNode.next = this.head;
+  //     this.head = newNode;
+  //   }
+  //   this.length++;
+  //   return this;
+  // }
   unShift(val) {
     var newNode = new Node(val);
     if (!this.head) {
@@ -74,11 +127,21 @@ class SingleLinkedList {
     return this;
   }
 
-  //   Retriving a node by its position
+  // //   Retriving a node by its position
+  // get(index) {
+  //   if (index < 0 || index >= this.length) {
+  //     return null;
+  //   }
+  //   var counter = 1;
+  //   var current = this.head;
+  //   while (counter !== index) {
+  //     current = current.next;
+  //     counter++;
+  //   }
+  //   return current;
+  // }
   get(index) {
-    if (index < 0 || index >= this.length) {
-      return null;
-    }
+    if (index < 0 || index >= this.length) return null;
     var counter = 1;
     var current = this.head;
     while (counter !== index) {
@@ -88,7 +151,15 @@ class SingleLinkedList {
     return current;
   }
 
-  //   Change the value of a node based on its position
+  // //   Change the value of a node based on its position
+  // set(index, val) {
+  //   var foundNode = this.get(index);
+  //   if (foundNode) {
+  //     foundNode.val = val;
+  //     return true;
+  //   }
+  //   return false;
+  // }
   set(index, val) {
     var foundNode = this.get(index);
     if (foundNode) {

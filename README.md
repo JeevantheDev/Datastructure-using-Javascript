@@ -2,10 +2,10 @@
 
 ## Contents:-
 
-### 0. Searching
+### 0. Searching `-14/12/2020`
 
-- [x] Linear Searching `-14/12/2020`
-- [x] Binary Searching `-14/12/2020`
+- [x] Linear Searching
+- [x] Binary Searching
 
 ### 1. Sorting
 
@@ -16,7 +16,7 @@
 - [x] Quick Sort
 - [x] Radix Sort
 
-### 2. Single Linked-List
+### 2. Single Linked-List `-15/12/2020`
 
 - [x] Insert node at the beginning
 - [x] Remove node from the beginning
@@ -74,7 +74,7 @@
 
 ### 9. Hash Table
 
-#### 10. Graph (Adjacency List)
+### 10. Graph (Adjacency List)
 
 - [x] Add Vertex
 - [x] Add Edge
