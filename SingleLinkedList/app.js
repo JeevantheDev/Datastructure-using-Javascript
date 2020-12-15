@@ -169,7 +169,25 @@ class SingleLinkedList {
     return false;
   }
 
-  //   Insert a node to the linkedlist at a position
+  // //   Insert a node to the linkedlist at a position
+  // insert(index, val) {
+  //   if (index < 0 || index > this.length) {
+  //     return false;
+  //   }
+  //   if (index === this.length) {
+  //     return this.push(val);
+  //   }
+  //   if (index === 0) {
+  //     return this.unShift(val);
+  //   }
+  //   var newNode = new Node(val);
+  //   var foundNodeAtPrevIndex = this.get(index - 1);
+  //   var temp = foundNodeAtPrevIndex.next;
+  //   foundNodeAtPrevIndex.next = newNode;
+  //   newNode.next = temp;
+  //   this.length++;
+  //   return true;
+  // }
   insert(index, val) {
     if (index < 0 || index > this.length) {
       return false;
@@ -186,18 +204,29 @@ class SingleLinkedList {
     foundNodeAtPrevIndex.next = newNode;
     newNode.next = temp;
     this.length++;
-    return true;
+    return this;
   }
 
-  //   Remove a node from specific position
+  // //   Remove a node from specific position
+  // remove(index) {
+  //   if (index < 0 || index > this.length) {
+  //     return null;
+  //   }
+  //   if (index === 0) return this.shift();
+  //   if (index === this.length) {
+  //     return this.pop();
+  //   }
+  //   var nodeAtCurrIndex = this.get(index);
+  //   var nodeAtPrevIndex = this.get(index - 1);
+  //   nodeAtPrevIndex.next = nodeAtCurrIndex.next;
+  //   this.length--;
+  //   return nodeAtCurrIndex;
+  // }
   remove(index) {
-    if (index < 0 || index > this.length) {
-      return null;
-    }
+    if (index < 0 || index > this.length) return null;
     if (index === 0) return this.shift();
-    if (index === this.length) {
-      return this.pop();
-    }
+    if (index === this.length) return this.pop();
+
     var nodeAtCurrIndex = this.get(index);
     var nodeAtPrevIndex = this.get(index - 1);
     nodeAtPrevIndex.next = nodeAtCurrIndex.next;
