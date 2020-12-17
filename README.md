@@ -29,7 +29,7 @@
 - [x] Reverse the list
 - [x] Print the list
 
-### 3. Double Linked-List
+### 3. Double Linked-List `-17/12/2020`
 
 - [x] Insert node at the beginning
 - [x] Remove node from the beginning

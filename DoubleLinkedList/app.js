@@ -13,7 +13,20 @@ class DoubleLinkedList {
     this.length = 0;
   }
 
-  // Add value to end of the list
+  // // Add value to end of the list
+  // push(val) {
+  //   const newNode = new Node(val);
+  //   if (this.length === 0) {
+  //     this.head = newNode;
+  //     this.tail = newNode;
+  //   } else {
+  //     this.tail.next = newNode;
+  //     newNode.prev = this.tail;
+  //     this.tail = newNode;
+  //   }
+  //   this.length++;
+  //   return this;
+  // }
   push(val) {
     const newNode = new Node(val);
     if (this.length === 0) {
@@ -28,11 +41,25 @@ class DoubleLinkedList {
     return this;
   }
 
-  //   Remove the node from the end
+  // //   Remove the node from the end
+  // pop() {
+  //   if (!this.head) {
+  //     return null;
+  //   }
+  //   var toBePopped = this.tail;
+  //   if (this.length === 1) {
+  //     this.head = null;
+  //     this.tail = null;
+  //   } else {
+  //     this.tail = toBePopped.prev;
+  //     this.tail.next = null;
+  //     toBePopped.prev = null;
+  //   }
+  //   this.length--;
+  //   return toBePopped;
+  // }
   pop() {
-    if (!this.head) {
-      return null;
-    }
+    if (!this.head) return null;
     var toBePopped = this.tail;
     if (this.length === 1) {
       this.head = null;
@@ -46,11 +73,25 @@ class DoubleLinkedList {
     return toBePopped;
   }
 
-  //   Remove the node from the beginning
+  // //   Remove the node from the beginning
+  // shift() {
+  //   if (!this.head) {
+  //     return undefined;
+  //   }
+  //   var toBePopped = this.head;
+  //   if (this.length === 1) {
+  //     this.head = null;
+  //     this.tail = null;
+  //   } else {
+  //     this.head = toBePopped.next;
+  //     this.head.prev = null;
+  //     toBePopped.next = null;
+  //   }
+  //   this.length--;
+  //   return toBePopped;
+  // }
   shift() {
-    if (!this.head) {
-      return undefined;
-    }
+    if (!this.head) return null;
     var toBePopped = this.head;
     if (this.length === 1) {
       this.head = null;
@@ -61,13 +102,26 @@ class DoubleLinkedList {
       toBePopped.next = null;
     }
     this.length--;
-    return toBePopped;
+    return this.length;
   }
 
-  //   Insert the node at the beginning of the list
+  // //   Insert the node at the beginning of the list
+  // unshift(val) {
+  //   var newNode = new Node(val);
+  //   if (!this.head) {
+  //     this.head = newNode;
+  //     this.tail = newNode;
+  //   } else {
+  //     this.head.prev = newNode;
+  //     newNode.next = this.head;
+  //     this.head = newNode;
+  //   }
+  //   this.length++;
+  //   return this;
+  // }
   unshift(val) {
-    var newNode = new Node(val);
-    if (!this.head) {
+    const newNode = new Node(val);
+    if (this.length === 0) {
       this.head = newNode;
       this.tail = newNode;
     } else {
@@ -78,15 +132,36 @@ class DoubleLinkedList {
     this.length++;
     return this;
   }
-  //   Get The node at a purticular index
+  // //   Get The node at a purticular index
+  // get(index) {
+  //   if (index < 0 || index > this.length) {
+  //     return undefined;
+  //   }
+  //   var counter;
+  //   var current;
+  //   if (index < this.length / 2) {
+  //     counter = 0;
+  //     current = this.head;
+  //     while (counter !== index) {
+  //       current = current.next;
+  //       counter++;
+  //     }
+  //   } else {
+  //     counter = this.length;
+  //     current = this.tail;
+  //     while (counter !== index) {
+  //       current = current.prev;
+  //       counter--;
+  //     }
+  //   }
+  //   return current;
+  // }
   get(index) {
-    if (index < 0 || index > this.length) {
-      return undefined;
-    }
+    if (index < 0 || index > this.length) return undefined;
     var counter;
     var current;
     if (index < this.length / 2) {
-      counter = 0;
+      counter = 1;
       current = this.head;
       while (counter !== index) {
         current = current.next;
@@ -102,11 +177,29 @@ class DoubleLinkedList {
     }
     return current;
   }
-  //   Set a node according to the index position
+  // //   Set a node according to the index position
+  // set(index, val) {
+  //   if (index < 0 || index > this.length) {
+  //     return null;
+  //   }
+  //   if (index === 0) {
+  //     return this.unshift(val);
+  //   }
+  //   if (index === this.length) {
+  //     return this.push(val);
+  //   }
+  //   var newNode = new Node(val);
+  //   var foundNode = this.get(index - 1);
+  //   var afterFoundNode = foundNode.next;
+  //   afterFoundNode.prev = newNode;
+  //   newNode.next = afterFoundNode;
+  //   foundNode.next = newNode;
+  //   newNode.prev = foundNode;
+  //   this.length++;
+  //   return true;
+  // }
   set(index, val) {
-    if (index < 0 || index > this.length) {
-      return null;
-    }
+    if (index < 0 || index > this.length) return null;
     if (index === 0) {
       return this.unshift(val);
     }
