@@ -41,13 +41,13 @@
 - [x] Remove a node by its postion
 - [x] Print the list
 
-### 4. Stack
+### 4. Stack `-19/12/2020`
 
 - [x] Push values into the stack.
 - [x] Pop values from the stack.
 - [x] Return Peek value of the stack.
 
-### 5. Queue
+### 5. Queue `-19/12/2020`
 
 - [x] Insert values into the Queue.
 - [x] Remove values from the Queue.

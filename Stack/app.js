@@ -12,9 +12,21 @@ class Stack {
     this.size = 0;
   }
 
+  // push(value) {
+  //   var newNode = new Node(value);
+  //   if (!this.first) {
+  //     this.first = newNode;
+  //     this.last = newNode;
+  //   } else {
+  //     var temp = this.first;
+  //     this.first = newNode;
+  //     this.first.next = temp;
+  //   }
+  //   return ++this.size;
+  // }
   push(value) {
     var newNode = new Node(value);
-    if (!this.first) {
+    if (this.size === 0) {
       this.first = newNode;
       this.last = newNode;
     } else {
@@ -22,9 +34,20 @@ class Stack {
       this.first = newNode;
       this.first.next = temp;
     }
-    return ++this.size;
+    this.size++;
+    return this;
   }
 
+  // pop() {
+  //   if (!this.first) {
+  //     return null;
+  //   }
+  //   var temp = this.first;
+  //   if (this.first === this.last) return (this.last = null);
+  //   this.first = this.first.next;
+  //   this.size--;
+  //   return temp.value;
+  // }
   pop() {
     if (!this.first) {
       return null;
@@ -45,6 +68,7 @@ var stack = new Stack();
 stack.push(15);
 stack.push(10);
 stack.push(5);
+stack.push(25);
 console.log("Push Values into the stack");
 console.log(stack);
 console.log("Give the top values of the stack:- ", stack.peek());
