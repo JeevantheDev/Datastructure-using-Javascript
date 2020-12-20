@@ -43,27 +43,27 @@ class PriorityQueue {
       let leftChildIdx = 2 * idx + 1;
       let rightChildIdx = 2 * idx + 2;
       let leftChild, rightChild;
-      let swap = null;
+      let swapIdx = null;
 
       if (leftChildIdx < length) {
         leftChild = this.values[leftChildIdx];
         if (leftChild.priority < element.priority) {
-          swap = leftChildIdx;
+          swapIdx = leftChildIdx;
         }
       }
       if (rightChildIdx < length) {
         rightChild = this.values[rightChildIdx];
         if (
-          (swap === null && rightChild.priority < element.priority) ||
-          (swap !== null && rightChild.priority < leftChild.priority)
+          (swapIdx === null && rightChild.priority < element.priority) ||
+          (swapIdx !== null && rightChild.priority < leftChild.priority)
         ) {
-          swap = rightChildIdx;
+          swapIdx = rightChildIdx;
         }
       }
-      if (swap === null) break;
-      this.values[idx] = this.values[swap];
-      this.values[swap] = element;
-      idx = swap;
+      if (swapIdx === null) break;
+      this.values[idx] = this.values[swapIdx];
+      this.values[swapIdx] = element;
+      idx = swapIdx;
     }
   }
 }
@@ -78,7 +78,9 @@ class Node {
 
 const pq = new PriorityQueue();
 pq.enqueue("Common Cold", 3);
-pq.enqueue("Mideum Cold", 1);
-pq.enqueue("High Cold", 5);
-pq.enqueue("Very High Cold", 5);
+pq.enqueue("High Cold", 1);
+pq.enqueue("Medium Cold", 4);
+pq.enqueue("Very low Cold", 5);
+console.log(pq);
+console.log(pq.dequeue());
 console.log(pq);

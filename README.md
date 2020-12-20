@@ -62,12 +62,12 @@
   - [x] Pre Order
   - [x] In Order
 
-### 7. Binary Heap
+### 7. Binary Heap `-20/12/2020`
 
 - [x] Insert values into MaxHeap.
 - [x] Extract the max value from MaxHeap.
 
-### 8. Priority Queue (Min Heap)
+### 8. Priority Queue (Min Heap) `-20/12/2020`
 
 - [x] Enqueue.
 - [x] Dequeue.
