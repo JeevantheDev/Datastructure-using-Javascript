@@ -2,6 +2,12 @@
 
 ## Contents:-
 
+### Problem Solving Pattern
+
+- [x] Frequency Counter
+- [x] Multiple Pointer
+- [x] Sliding Window
+
 ### 0. Searching
 
 - [x] Linear Searching
