@@ -72,9 +72,9 @@
 - [x] Enqueue.
 - [x] Dequeue.
 
-### 9. Hash Table
+### 9. Hash Table - `23/12/2020`
 
-### 10. Graph (Adjacency List)
+### 10. Graph (Adjacency List) `23/12/2020`
 
 - [x] Add Vertex
 - [x] Add Edge

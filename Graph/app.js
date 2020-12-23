@@ -3,22 +3,42 @@ class Graph {
     this.adjacencyList = {};
   }
 
+  // addVertex(vertex) {
+  //   if (!this.adjacencyList[vertex]) {
+  //     this.adjacencyList[vertex] = [];
+  //   }
+  // }
   addVertex(vertex) {
     if (!this.adjacencyList[vertex]) {
       this.adjacencyList[vertex] = [];
     }
   }
 
+  // addEdge(v1, v2) {
+  //   this.adjacencyList[v1].push(v2);
+  //   this.adjacencyList[v2].push(v1);
+  // }
   addEdge(v1, v2) {
     this.adjacencyList[v1].push(v2);
     this.adjacencyList[v2].push(v1);
   }
 
+  // removeEdge(v1, v2) {
+  //   this.adjacencyList[v1] = this.adjacencyList[v1].filter((v) => v !== v2);
+  //   this.adjacencyList[v2] = this.adjacencyList[v2].filter((v) => v !== v1);
+  // }
   removeEdge(v1, v2) {
     this.adjacencyList[v1] = this.adjacencyList[v1].filter((v) => v !== v2);
     this.adjacencyList[v2] = this.adjacencyList[v2].filter((v) => v !== v1);
   }
 
+  // removeVertex(vertex) {
+  //   while (this.adjacencyList[vertex].length) {
+  //     const adjacentVertex = this.adjacencyList[vertex].pop();
+  //     this.removeEdge(vertex, adjacentVertex);
+  //   }
+  //   delete this.adjacencyList[vertex];
+  // }
   removeVertex(vertex) {
     while (this.adjacencyList[vertex].length) {
       const adjacentVertex = this.adjacencyList[vertex].pop();
@@ -27,16 +47,32 @@ class Graph {
     delete this.adjacencyList[vertex];
   }
 
+  // recursiveDFS(start) {
+  //   const result = [];
+  //   const visted = {};
+  //   const adjacencyList = this.adjacencyList;
+  //   (function dfsRec(vertex) {
+  //     if (!vertex) return null;
+  //     visted[vertex] = true;
+  //     result.push(vertex);
+  //     adjacencyList[vertex].forEach((v) => {
+  //       if (!visted[v]) {
+  //         return dfsRec(v);
+  //       }
+  //     });
+  //   })(start);
+  //   return result;
+  // }
   recursiveDFS(start) {
     const result = [];
-    const visted = {};
+    const visited = {};
     const adjacencyList = this.adjacencyList;
     (function dfsRec(vertex) {
       if (!vertex) return null;
-      visted[vertex] = true;
+      visited[vertex] = true;
       result.push(vertex);
       adjacencyList[vertex].forEach((v) => {
-        if (!visted[v]) {
+        if (!visited[v]) {
           return dfsRec(v);
         }
       });
@@ -65,6 +101,27 @@ class Graph {
     return result;
   }
 
+  // iterativeDFS(start) {
+  //   const visited = {};
+  //   const result = [];
+  //   const stack = [start];
+  //   let currentVertex;
+  //   visited[start] = true;
+
+  //   while (stack.length) {
+  //     currentVertex = stack.pop();
+  //     result.push(currentVertex);
+
+  //     this.adjacencyList[currentVertex].forEach((v) => {
+  //       if (!visited[v]) {
+  //         visited[v] = true;
+  //         stack.push(v);
+  //       }
+  //     });
+  //   }
+  //   return result;
+  // }
+
   bfs(start) {
     const queue = [start];
     const result = [];
@@ -82,9 +139,28 @@ class Graph {
         }
       });
     }
-
     return result;
   }
+  // bfs(start) {
+  //   const queue = [start];
+  //   const result = [];
+  //   const visited = {};
+  //   let currentVertex;
+  //   visited[start] = true;
+
+  //   while (queue.length) {
+  //     currentVertex = queue.shift();
+  //     result.push(currentVertex);
+  //     this.adjacencyList[currentVertex].forEach((v) => {
+  //       if (!visited[v]) {
+  //         visited[v] = true;
+  //         queue.push(v);
+  //       }
+  //     });
+  //   }
+
+  //   return result;
+  // }
 }
 
 const grh = new Graph();
