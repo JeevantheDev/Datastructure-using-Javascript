@@ -89,3 +89,5 @@
 - [x] Depth First Search (Recursive)
 - [x] Depth First Search (Iterative)
 - [x] Breadth First Search (Iterative)
+
+### 11. Dijkstra Algorithm
